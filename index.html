@@ -1,0 +1,186 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+---
+
+<Layout title="NetzUfer - Digitale Plattformen">
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 overflow-hidden">
+      <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center brightness-50"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-dark-50 via-transparent to-dark-50"></div>
+      <div class="absolute inset-0 bg-gradient-to-br from-dark-100/5 via-primary/5 to-secondary/5 animate-gradient"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(14,165,233,0.15),transparent_50%)]"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="text-center" data-aos="fade-up">
+          <h1 class="text-4xl font-bold text-white sm:text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary via-white to-secondary animate-gradient">
+            Innovative<br>Digitale Plattformen
+          </h1>
+          <p class="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
+            Wir entwickeln digitale Lösungen, die Menschen und Ideen verbinden. <br>(im Aufbau)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-dark-100/80 backdrop-blur-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-white mb-12" data-aos="fade-up">Unsere Plattformen</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-6 bg-dark-200/80 backdrop-blur-sm rounded-lg border border-primary/20 transform hover:scale-105 transition-all hover:border-primary/50" data-aos="fade-up" data-aos-delay="100">
+            <div class="h-12 w-12 rounded-lg bg-gradient-to-br from-primary to-secondary mb-4 animate-wave"></div>
+            <h3 class="text-xl font-semibold text-white mb-4">Community Portal</h3>
+            <p class="text-gray-300">Eine lebendige Online-Community für den Austausch von Ideen und Erfahrungen.</p>
+          </div>
+          <div class="p-6 bg-dark-200/80 backdrop-blur-sm rounded-lg border border-primary/20 transform hover:scale-105 transition-all hover:border-primary/50" data-aos="fade-up" data-aos-delay="200">
+            <div class="h-12 w-12 rounded-lg bg-gradient-to-br from-secondary to-primary mb-4 animate-wave"></div>
+            <h3 class="text-xl font-semibold text-white mb-4">Content Platform</h3>
+            <p class="text-gray-300">Digitale Inhalte für moderne Unterhaltung und Information.</p>
+          </div>
+          <div class="p-6 bg-dark-200/80 backdrop-blur-sm rounded-lg border border-primary/20 transform hover:scale-105 transition-all hover:border-primary/50" data-aos="fade-up" data-aos-delay="300">
+            <div class="h-12 w-12 rounded-lg bg-gradient-to-br from-primary via-secondary to-primary mb-4 animate-wave"></div>
+            <h3 class="text-xl font-semibold text-white mb-4">Digital Marketplace</h3>
+            <p class="text-gray-300">Ein innovativer Marktplatz für digitale Produkte und Dienstleistungen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="relative py-20 overflow-hidden">
+      <div class="absolute inset-0 bg-dark-50/50 backdrop-blur-sm"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(3,105,161,0.1),transparent_50%)]"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <h2 class="text-3xl font-bold text-center text-white mb-12" data-aos="fade-up">Über uns</h2>
+        <div class="max-w-3xl mx-auto text-center" data-aos="fade-up" data-aos-delay="100">
+          <p class="text-lg text-gray-300">
+           Wir verbinden Menschen und Technologien. Unser Fokus liegt auf der Entwicklung und dem Betrieb eigener Webprojekte, die durch modernste Technologie und benutzerfreundliches Design überzeugen.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-dark-100/80 backdrop-blur-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-white mb-12" data-aos="fade-up">Kontakt</h2>
+        <div class="max-w-lg mx-auto" data-aos="fade-up" data-aos-delay="100">
+          <form id="contactForm" class="space-y-6">
+            <div class="group">
+              <label for="name" class="block text-sm font-medium text-gray-200">Name</label>
+              <input type="text" id="name" name="name" required class="mt-1 block w-full rounded-lg bg-dark-200/80 backdrop-blur-sm border-dark-300 text-white shadow-sm focus:border-primary focus:ring-primary transition-all group-hover:border-primary/50">
+            </div>
+            <div class="group">
+              <label for="email" class="block text-sm font-medium text-gray-200">E-Mail</label>
+              <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-lg bg-dark-200/80 backdrop-blur-sm border-dark-300 text-white shadow-sm focus:border-primary focus:ring-primary transition-all group-hover:border-primary/50">
+            </div>
+            <div class="group">
+              <label for="message" class="block text-sm font-medium text-gray-200">Nachricht</label>
+              <textarea id="message" name="message" rows="4" required class="mt-1 block w-full rounded-lg bg-dark-200/80 backdrop-blur-sm border-dark-300 text-white shadow-sm focus:border-primary focus:ring-primary transition-all group-hover:border-primary/50"></textarea>
+            </div>
+            <div>
+              <button type="submit" class="w-full bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-xl font-medium shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 ease-out">
+                Nachricht senden
+              </button>
+            </div>
+          </form>
+          <div id="formStatus" class="mt-4 text-center hidden">
+            <p class="text-green-400">Vielen Dank für Ihre Nachricht! Wir werden uns in Kürze bei Ihnen melden.</p>
+          </div>
+          <div id="formError" class="mt-4 text-center hidden">
+            <p class="text-red-400">Es gab einen Fehler beim Senden der Nachricht. Bitte versuchen Sie es später erneut.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark-200/80 backdrop-blur-sm text-white py-12 border-t border-dark-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div data-aos="fade-up">
+          <h3 class="text-xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">NetzUfer</h3>
+          <p class="text-gray-400">Betreiber innovativer digitaler Plattformen</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-xl font-bold mb-4">Kontakt</h3>
+          <p class="text-gray-400">info@netzufer.de</p>
+          <p class="text-gray-400">+49 123 456789</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-xl font-bold mb-4">Social Media</h3>
+          <div class="flex space-x-4">
+            <a href="https://x.com/NetzUfer" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-primary transition-colors">
+              <span class="sr-only">X (Twitter)</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-primary transition-colors">
+              <span class="sr-only">Facebook</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-primary transition-colors">
+              <span class="sr-only">Instagram</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 pt-8 border-t border-dark-400 text-center text-gray-400">
+        <p>&copy; {new Date().getFullYear()} NetzUfer. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(e.target);
+      const data = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        message: formData.get('message')
+      };
+
+      try {
+        const response = await fetch(`${import.meta.env.SUPABASE_URL}/functions/v1/contact`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${import.meta.env.SUPABASE_ANON_KEY}`
+          },
+          body: JSON.stringify(data)
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to send message');
+        }
+
+        const result = await response.json();
+        
+        if (result.error) {
+          throw new Error(result.error);
+        }
+
+        // Show success message
+        document.getElementById('formStatus').classList.remove('hidden');
+        document.getElementById('formError').classList.add('hidden');
+        // Reset form
+        e.target.reset();
+      } catch (error) {
+        console.error('Error:', error);
+        document.getElementById('formError').classList.remove('hidden');
+        document.getElementById('formStatus').classList.add('hidden');
+      }
+    });
+  </script>
+</Layout>
