@@ -1,10 +1,27 @@
----
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
----
-
-<Layout title="NetzUfer - Digitale Plattformen">
-  <Header />
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NetzUfer - Digitale Plattformen</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-dark-50 text-white">
+  <header class="fixed w-full bg-dark-100/80 backdrop-blur-sm z-50 border-b border-dark-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <a href="/" class="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">NetzUfer</a>
+        </div>
+        <nav class="flex items-center space-x-8">
+          <a href="#portfolio" class="text-gray-300 hover:text-primary transition-colors">Portfolio</a>
+          <a href="#about" class="text-gray-300 hover:text-primary transition-colors">Über uns</a>
+          <a href="#contact" class="text-gray-300 hover:text-primary transition-colors">Kontakt</a>
+        </nav>
+      </div>
+    </div>
+  </header>
   
   <main>
     <!-- Hero Section -->
@@ -16,10 +33,12 @@ import Header from '../components/Header.astro';
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div class="text-center" data-aos="fade-up">
           <h1 class="text-4xl font-bold text-white sm:text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary via-white to-secondary animate-gradient">
-            Innovative<br>Digitale Plattformen
+            Innovative
+Digitale Plattformen
           </h1>
           <p class="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
-            Wir entwickeln digitale Lösungen, die Menschen und Ideen verbinden. <br>(im Aufbau)
+            Wir entwickeln digitale Lösungen, die Menschen und Ideen verbinden. 
+(im Aufbau)
           </p>
         </div>
       </div>
@@ -57,7 +76,7 @@ import Header from '../components/Header.astro';
         <h2 class="text-3xl font-bold text-center text-white mb-12" data-aos="fade-up">Über uns</h2>
         <div class="max-w-3xl mx-auto text-center" data-aos="fade-up" data-aos-delay="100">
           <p class="text-lg text-gray-300">
-           Wir verbinden Menschen und Technologien. Unser Fokus liegt auf der Entwicklung und dem Betrieb eigener Webprojekte, die durch modernste Technologie und benutzerfreundliches Design überzeugen.
+            Wir verbinden Menschen und Technologien. Unser Fokus liegt auf der Entwicklung und dem Betrieb eigener Webprojekte, die durch modernste Technologie und benutzerfreundliches Design überzeugen.
           </p>
         </div>
       </div>
@@ -135,52 +154,12 @@ import Header from '../components/Header.astro';
         </div>
       </div>
       <div class="mt-8 pt-8 border-t border-dark-400 text-center text-gray-400">
-        <p>&copy; {new Date().getFullYear()} NetzUfer. Alle Rechte vorbehalten.</p>
+        <p>&copy; <span id="current-year"></span> NetzUfer. Alle Rechte vorbehalten.</p>
       </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      
-      const formData = new FormData(e.target);
-      const data = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        message: formData.get('message')
-      };
-
-      try {
-        const response = await fetch(`${import.meta.env.SUPABASE_URL}/functions/v1/contact`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${import.meta.env.SUPABASE_ANON_KEY}`
-          },
-          body: JSON.stringify(data)
-        });
-
-        if (!response.ok) {
-          throw new Error('Failed to send message');
-        }
-
-        const result = await response.json();
-        
-        if (result.error) {
-          throw new Error(result.error);
-        }
-
-        // Show success message
-        document.getElementById('formStatus').classList.remove('hidden');
-        document.getElementById('formError').classList.add('hidden');
-        // Reset form
-        e.target.reset();
-      } catch (error) {
-        console.error('Error:', error);
-        document.getElementById('formError').classList.remove('hidden');
-        document.getElementById('formStatus').classList.add('hidden');
-      }
-    });
-  </script>
-</Layout>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
